@@ -1,80 +1,186 @@
+:root{
+--primary-color:rgb(14, 53, 66);
+--secondary-color:rgb(102, 136, 133);
+--shadow-color:rgb(180, 208, 199);
+--text-color1:rgb(10, 46, 56);
+}
+
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 body {
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    background-image: linear-gradient(225deg, #5f67a0 17%, #273087 89%);
-  }
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  /* background-image: linear-gradient(180deg, rgb(102, 136, 133) 11%, rgb(14, 53, 66) 89%); */
+  background-image: linear-gradient(180deg, rgba(14, 53, 66, 0.9) 30%, rgb(14, 53, 66) 100%, rgb(102, 136, 133) 100%);
+}
 
 .avatar{
-    width: 120px;
-    border-radius: 8px  ;
-    border: 1.4px solid rgb(231, 226, 226);
-    box-shadow: 0 0 20px rgba(121,155,196,1);
+  width: 200px;
+  border-radius: 8px  ;
+  border: 1.4px solid rgb(231, 226, 226);
+  box-shadow: 0 0 20px var(--shadow-color);
+  margin-bottom: 5px;
 }
 
 h1{
-    font-family: 'Architects Daughter', cursive;
-    font-weight: 100;
-    font-size:24px;
-    margin-bottom: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size:24px;
+  margin-bottom: 2px;
 }
 
 h2{
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .profile {
-    margin-top: 20px;
-    text-align: center;
-  }
+  margin-top: 20px;
+  text-align: center;
+}
+
+
 
 .social{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 20px 0;
 }
 
 .social img{
-    width: 33px;
+  width: 33px;
 }
 
 .links-list{
-    list-style: none;
+  list-style: none;
 }
 
 .links-list li{
-    margin:10px 20px;
-    
+  margin:10px 20px;
+  
+}
+
+.links-list li img{
+display: none;
 }
 
 .links-list li a {
-    display: block;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
+  display: block;
+  background: rgba(255,255,255,.8);
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
 
-  .links-list li a span {
-    color: grey;
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-  }
+.links-list li a span {
+  color: grey;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 .links-list li a.active {
-    box-shadow: 0 0 20px rgb(196, 23, 202);
-    color: rgb(54,77,204);
+
+  color: var(--text-color1);
+}
+
+.links-list.second {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+
+  body{
+    height: 100vh;
+
+  }
+  .profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .profile h1{
+    border-bottom: 1px solid var(--shadow-color);
+    width: fit-content;
+    align-self: end;
+    margin-bottom: 5px;
   }
   
-  .links-list.second {
-    margin-top: 30px;
+  .avatar{
+    display: block;
+    width: 120px;
+    grid-row: span 2;
+    justify-self: end;
+    margin-right: 20px;
   }
+
+  .social{
+    justify-content: center;
+  }
+
+  .social li{
+    margin: 30px 0;
+    margin-right: 50px;
+  }
+  .social li:last-child{
+    margin-right: 0;
+  }
+
+  .container-desktop{
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .links-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .links-list li{
+    width: 230px;
+    transition: 200ms;
+  }
+
+  .links-list li:hover{
+    transform: scale(1.4);
+  }
+
+  .links-list li img{
+    display: block;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-height: 129.38px;
+  }
+  .links-list li.shadow{
+    animation: shadoweffect 800ms ease-in infinite alternate;
+
+    border-radius: 10px;
+  }
+
+  .links-list li a{
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 768px){
+  .links-list li a.active{
+    box-shadow: 0 0 15px var(--shadow-color);
+  }
+}
+
+@keyframes shadoweffect {
+  0%{
+    box-shadow: 0 0 10px var(--shadow-color);
+  }
+ 
+  100%{box-shadow: 0 0 20px var(--shadow-color);}
+}
