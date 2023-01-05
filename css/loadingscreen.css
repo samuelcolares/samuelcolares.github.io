@@ -1,18 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-body{
-    
+body {
     background-image: url(../img/background1.jpg);
     background-size: cover;
     height: 100vh;
 }
 
-.wrapper{
+.wrapper {
     height: 95%;
     display: flex;
     flex-direction: column;
@@ -21,12 +19,14 @@ body{
     align-content: center;
 }
 
-.dual-ring {   
+.dual-ring {
     display: inline-block;
     width: 80px;
     height: 80px;
     margin-bottom: 30px;
-  }
+    /* transform: translateY(-1000%); */
+    animation: dropdown 3s ease-out forwards;
+}
 .dual-ring:after {
     content: " ";
     display: block;
@@ -37,30 +37,42 @@ body{
     border-color: #fff transparent #fff transparent;
     filter: drop-shadow(0px 0px 6px red);
     animation: lds-dual-ring 1.2s linear infinite;
-  }
+}
 
-  @keyframes lds-dual-ring {
+@keyframes dropdown {
     0% {
-      transform: rotate(0deg);
+        transform: translateY(-1000%);
+        filter: blur(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
-.texto{
+.texto {
     color: white;
     text-align: center;
 
     font-family: sans-serif;
-  }
-  
-.texto h1{
+}
+
+.texto h1 {
     display: block;
     margin-bottom: 10px;
-    animation: texteffect 3s linear infinite alternate;
-    
-  }
+    animation: texteffect 3s linear 3s infinite alternate;
+    color: transparent;
+}
 
 @keyframes texteffect {
     0% {
@@ -68,82 +80,76 @@ body{
         filter: blur(10px) drop-shadow(5px -11px 1px black);
     }
 
-    5%{
-        color: rgba(255,0,0,0.1);
+    5% {
+        color: rgba(255, 0, 0, 0.1);
         filter: blur(10px) drop-shadow(5px -11px 1px black);
-        
     }
-    
-    10%{
-        color: rgba(255,0,0,0.2);
+
+    10% {
+        color: rgba(255, 0, 0, 0.2);
         filter: blur(9px) drop-shadow(5px -11px 1px black);
     }
-    
-    15%{
-        color: rgba(255,0,0,0.3);
+
+    15% {
+        color: rgba(255, 0, 0, 0.3);
         filter: blur(8px) drop-shadow(5px -11px 1px black);
-        
     }
-    
-    20%{
-        color: rgba(255,0,0,0.4);
+
+    20% {
+        color: rgba(255, 0, 0, 0.4);
         filter: blur(7px) drop-shadow(5px -11px 1px black);
     }
-    
-    25%{
-        color: rgba(255,0,0,0.5);
+
+    25% {
+        color: rgba(255, 0, 0, 0.5);
         filter: blur(6px) drop-shadow(5px -11px 1px black);
-        
     }
-    
-    30%{
-        color: rgba(255,0,0,0.6);
+
+    30% {
+        color: rgba(255, 0, 0, 0.6);
         filter: blur(5px) drop-shadow(5px -10px 1px red);
     }
-    
-    35%{
-        color: rgba(255,0,0,0.7);
+
+    35% {
+        color: rgba(255, 0, 0, 0.7);
         filter: blur(4px) drop-shadow(4px 8px 1px red);
     }
-    
-    40%{
-        color: rgba(255,0,0,0.8);
+
+    40% {
+        color: rgba(255, 0, 0, 0.8);
         filter: blur(3px) drop-shadow(3px -5px 1px red);
     }
-    
-    50%{
-        color: rgba(255,0,0,0.9);
+
+    50% {
+        color: rgba(255, 0, 0, 0.9);
         filter: blur(0px) drop-shadow(2px 3px 1px red);
     }
-    
-    
-    100%{
-        color: rgba(255,0,0,1);
+
+    100% {
+        color: rgba(255, 0, 0, 1);
         filter: blur(2px);
     }
-    
-    
-  }
+}
 
-.texto span{
-    animation: texteffect2 3s linear 6s infinite alternate;
+
+.texto span {
+    animation: texteffect2 3s linear 8s infinite alternate;
     color: transparent;
     font-weight: bold;
-  }
+}
 
 @keyframes texteffect2 {
-    from{
+    from {
         color: transparent;
         filter: blur(6px) drop-shadow(5px -11px 1px black);
     }
-    to{
-        color:white;
+    to {
+        color: white;
         filter: blur(0px) drop-shadow(0px 0px 1px red);
     }
-    
-  }
+}
 
-.footer{
+.footer {
     height: 5%;
     display: flex;
     font-size: 13px;
@@ -153,35 +159,34 @@ body{
     align-content: flex-end;
     flex-wrap: wrap;
     filter: opacity(0.7);
+}
 
-  }
-
-.footer a{
+.footer a {
     text-decoration: none;
     color: white;
     margin-left: 2px;
     font-size: 13px;
     transition: 300ms;
-
 }
 
-.footer a:hover{
+.footer a:hover {
     color: blue;
     transform: translate(10px);
 }
 
-.footer a:visited{
+.footer a:visited {
     color: rgb(201, 35, 157);
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         background-image: url(../img/background3.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
     }
-    .footer, .footer a{
+    .footer,
+    .footer a {
         font-size: 11px;
     }
 }
