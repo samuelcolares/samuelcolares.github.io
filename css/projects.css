@@ -1,0 +1,214 @@
+.projects-list {
+    list-style: none;
+}
+
+.projects-list > .projects-list__item {
+    margin: 10px 20px;
+}
+
+.projects-list > .projects-list__item img {
+    display: none;
+}
+
+.projects-list > .projects-list__item > .projects-list__link {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.projects-list.principal
+    > .projects-list__item
+    > .projects-list__link
+    > .project-subtitle {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.projects-list.principal
+    > .projects-list__item
+    > .projects-list__link
+    > .project-title {
+    background: linear-gradient(to left, #870000, #190a05, #870000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.projects-list > .projects-list__item > .projects-list__link > .project-title {
+    color: black;
+    font-weight: 600;
+    font-family: "antonio";
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.projects-list
+    > .projects-list__item
+    > .projects-list__link
+    > .project-subtitle {
+    color: grey;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-family: "poppins";
+}
+
+.projects-list > .projects-list__item > .projects-list__link.active {
+    color: var(--text-color1);
+}
+
+.projects-list.second {
+    margin-top: 30px;
+}
+
+.projects-list > .projects-list__item > .projects-list__link.active {
+    box-shadow: 0 0 8px var(--shadow-color);
+}
+
+@media screen and (max-width: 767px) {
+    /* ---------animação dos projetos principais--------- */
+    .container-desktop > .projects-list.principal > li:first-child {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 2s forwards;
+    }
+
+    .container-desktop > .projects-list.principal > li:nth-child(2) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 2.2s forwards;
+    }
+    .container-desktop > .projects-list.principal > li:nth-child(3) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 2.4s forwards;
+    }
+    .container-desktop > .projects-list.principal > li:nth-child(4) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 2.6s forwards;
+    }
+    /* ---------------------------------------------------------- */
+    /* --------------Animação dos outros projetos--------------- */
+    .container-desktop > .projects-list.second > li:first-child {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 2.8s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(2) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 3s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(3) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 3.2s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(4) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 3.4s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(5) {
+        filter: opacity(0);
+        animation: opacity 2s ease-out 3.6s forwards;
+    }
+    /* ---------------------------------------------------------- */
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .container-desktop {
+        margin: 0 10vw;
+    }
+
+    .projects-list.principal {
+        margin-top: 2rem;
+    }
+
+    .projects-list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .projects-list > .projects-list__item {
+        margin: 0;
+        width: 300px;
+    }
+    .projects-list .projects-list__item img {
+        display: block;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        max-height: 163px;
+        filter: opacity(0.5);
+        transition: 400ms;
+    }
+    .projects-list > .projects-list__item > .projects-list__link {
+        border-radius: 0 0 10px 10px;
+        display: grid;
+    }
+
+    .projects-list
+        > .projects-list__item
+        > .projects-list__link
+        > .project-title {
+        letter-spacing: normal;
+        font-size: 1.3em;
+    }
+    .container-desktop .projects-list li:hover {
+        transform: scale(1.1) translateY(-20px);
+    }
+
+    .projects-list > .projects-list__item:hover img{
+        filter: opacity(1);
+    }
+
+    .projects-list > .projects-list__item:hover .projects-list__link{
+        background-color: white;
+    }
+
+    /* ---------animação dos projetos principais--------- */
+    .container-desktop > .projects-list.principal > li:first-child {
+        transform: translateX(2000px);
+        animation: translate2 4s ease-in-out 2s forwards;
+    }
+
+    .container-desktop > .projects-list.principal > li:nth-child(2) {
+        transform: translateX(2000px);
+        animation: translate2 4s ease-in-out 2.2s forwards;
+    }
+    .container-desktop > .projects-list.principal > li:nth-child(3) {
+        transform: translateX(2000px);
+        animation: translate2 4s ease-in-out 2.4s forwards;
+    }
+    .container-desktop > .projects-list.principal > li:nth-child(4) {
+        transform: translateX(2000px);
+        animation: translate2 4s ease-in-out 2.6s forwards;
+    }
+    /* ---------------------------------------------------------- */
+    /* --------------Animação dos outros projetos--------------- */
+    .container-desktop > .projects-list.second > li:first-child {
+        transform: translateX(-2000px);
+        animation: translate 4s ease 2.6s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(2) {
+        transform: translateX(-2000px);
+        animation: translate 4s ease 2.4s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(3) {
+        transform: translateX(-2000px);
+        animation: translate 4s ease 2.2s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(4) {
+        transform: translateX(-2000px);
+        animation: translate 4s ease 2s forwards;
+    }
+    .container-desktop > .projects-list.second > li:nth-child(5) {
+        transform: translateX(-2000px);
+        animation: translate 4s ease 2.8s forwards;
+    }
+    /* ---------------------------------------------------------- */
+}

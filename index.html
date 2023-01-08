@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Raleway&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7XBH57RX7"></script>
@@ -24,110 +23,128 @@
 
         gtag('config', 'G-T7XBH57RX7');
     </script>
+    <script src="https://kit.fontawesome.com/50da175140.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="profile">
-            <img src="img/img_profile.jpeg" alt="profile_pic" class="avatar">
-            <div class="child">
-                <img src="img/green-background.jpg" class="grand-child">
-                <img src="img/img_profile.png" alt="" class="sss">
+    <div class="background-mask">
+        <header>
+            <div class="profile">
+                <div class="profile-avatar">
+                    <img src="img/green-background.jpg" class="profile-avatar__background mobile">
+                    <img src="img/alt-background.jpg" class="profile-avatar__background desktop">
+                    <img src="img/img_profile.png" alt="" class="profile-avatar__avatar">
+                </div>
+                <div class="profile-text">
+                    <h1 class="profile-text__name">Samuel Colares</h1>
+                    <h2 class="profile-text__function">FRONT-END DEVELOPER</h2>
+                </div>
             </div>
-            <h1>Samuel Colares</h1>
-            <h2>FRONT-END DEVELOPER</h2>
-        </div>
-        <ul class="social">
+            <ul class="social-icons">
 
-            <li>
-                <a href="https://www.instagram.com/samuelcolares_/" target="_blank" rel="noopener noreferrer"><img
-                        src="img/instagram.svg" alt="instagram"></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/samuelcolares/" target="_blank" rel="noopener noreferrer"><img
-                        src="img/linkedin.svg" alt="linkedin"></a>
-            </li>
-            <li>
-                <a href="https://github.com/samuelcolares" target="_blank" rel="noopener noreferrer"><img
-                        src="img/github.svg" alt="github"></a>
-            </li>
-            <li>
-                <a href="https://samuelcolares.notion.site/Lista-de-Resumos-85b8511618954b91bd26c92404d9dec3"
-                    target="_blank" rel="noopener noreferrer"><img src="img/notion2.svg" alt="notion"></a>
-            </li>
-            <li>
-                <a href="mailto:samuelcolaresdeaquino@gmail.com" target="_blank" rel="noopener noreferrer"><img
-                        src="img/email.svg" alt="e-mail"></a>
-            </li>
+                <li class="social-icons__item">
+                    <a class="social-icons__link" href="https://www.instagram.com/samuelcolares_/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-instagram icon"></i></a>
+                </li>
+
+                <li class="social-icons__item">
+                    <a class="social-icons__link" href="https://www.linkedin.com/in/samuelcolares/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in icon"></i>
+                    </a>
+                </li>
+
+                <li class="social-icons__item">
+                    <a class="social-icons__link" href="https://github.com/samuelcolares" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-github icon"></i></a>
+                </li>
+                <li class="social-icons__item">
+                    <a class="social-icons__link"
+                        href="https://samuelcolares.notion.site/Lista-de-Resumos-85b8511618954b91bd26c92404d9dec3"
+                        target="_blank" rel="noopener noreferrer"><img src="img/notion2.svg" alt="notion"></a>
+                </li>
+                <li class="social-icons__item">
+                    <a class="social-icons__link" href="mailto:samuelcolaresdeaquino@gmail.com" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-solid fa-envelope icon"></i></a>
+                </li>
 
 
-        </ul>
-    </header>
-    <main>
-        <div class="container-desktop">
-            <ul class="links-list">
-                <li class="shadow">
-                    <img src="img/load.gif" alt="">
-                    <a href="loading.html" class="active">
-                        PROJETO DESTAQUE 01
-                        <span>Em breve</span>
-                    </a>
-                </li>
-                <li class="shadow">
-                    <img src="img/load.gif" alt="">
-                    <a href="loading.html" class="active">
-                        PROJETO DESTAQUE 02
-                        <span>Em breve</span>
-                    </a>
-                </li>
-                <li class="shadow">
-                    <img src="img/load.gif" alt="">
-                    <a href="loading.html" class="active">
-                        PROJETO DESTAQUE 03
-                        <span>Em breve</span>
-                    </a>
-                </li>
-                <li class="shadow">
-                    <img href="" src="img/load.gif" alt="">
-                    <a href="loading.html" class="active">
-                        PROJETO DESTAQUE 04
-                        <span>Em breve</span>
-                    </a>
-                </li>
             </ul>
+        </header>
+        <main>
+            <div class="container-desktop">
+                <ul class="projects-list principal">
+                    <li class="projects-list__item">
+                        <img src="img/load.gif" alt="" class="test">
+                        <a class="projects-list__link active" href="loading.html">
+                            <h2 class="project-title">PROJETO DESTAQUE 01</h2>
+                            <span class="project-subtitle">Em breve</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img src="img/load.gif" alt="" class="test">
+                        <a class="projects-list__link active" href="loading.html">
+                            <h2 class="project-title">PROJETO DESTAQUE 02</h2>
+                            <span class="project-subtitle">Em breve</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img src="img/load.gif" alt="" class="test">
+                        <a class="projects-list__link active" href="loading.html">
+                            <h2 class="project-title">PROJETO DESTAQUE 03</h2>
+                            <span class="project-subtitle">Em breve</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img href="" src="img/load.gif" alt="" class="test">
+                        <a class="projects-list__link active" href="loading.html">
+                            <h2 class="project-title">PROJETO DESTAQUE 04</h2>
+                            <span class="project-subtitle">Em breve</span>
+                        </a>
+                    </li>
+                </ul>
 
-            <ul class="links-list second">
-                <li>
-                    <img src="img/projeto-barber-shop.png" alt="">
-                    <a href="https://samuelcolares.github.io/barbershop/">
-                        Site de Barbearia
-                        <span>Envolvendo vários conteúdos de HTML e CSS</span>
-                    </a>
-                </li>
-                <li>
-                    <img src="img/projeto-alura-plus.png" alt="">
-                    <a href="https://samuelcolares.github.io/aluraplus/">
-                        Alura+
-                        <span>Praticando flexbox, grid e outras propriedades de CSS</span>
-                    </a>
-                </li>
-                <li>
-                    <img src="img/dica-checkbox.png" alt="">
-                    <a href="https://samuelcolares.github.io/checkboxtips/">
-                        Possibilidades com Checkbox
-                        <span>Animação e Menu Escondido </span>
-                    </a>
-                </li>
-                <li>
-                    <img src="img/load.gif" alt="">
-                    <a href="loading.html">
-                        PROJETO 04
-                        <span>Em breve</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </main>
+                <ul class="projects-list second">
+                    <li class="projects-list__item">
+                        <img src="img/projeto-barber-shop.png" alt="" class="test">
+                        <a class="projects-list__link" href="https://samuelcolares.github.io/barbershop/">
+                            <h2 class="project-title">Site de Barbearia</h2>
+                            <span class="project-subtitle">Envolvendo vários conteúdos de HTML e CSS</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img src="img/projeto-alura-plus.png" alt="" class="test">
+                        <a class="projects-list__link" href="https://samuelcolares.github.io/aluraplus/">
+                            <h2 class="project-title">Alura+</h2>
+                            <span class="project-subtitle">Praticando flexbox, grid e outras propriedades de CSS</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img src="img/dica-checkbox.png" alt="" class="test">
+                        <a class="projects-list__link" href="https://samuelcolares.github.io/checkboxtips/">
+                            <h2 class="project-title">Possibilidades com Checkbox</h2>
+                            <span class="project-subtitle">Animação e Menu Escondido utilizando input tipo checkbox</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img src="img/projeto-alura-books.png" alt="" class="test">
+                        <a class="projects-list__link" href="https://samuelcolares.github.io/alura-books/">
+                            <h2 class="project-title">Alura Books</h2>
+                            <span class="project-subtitle">Site feito com implementação de <b>Swiper.js</b> e 3 media queries</span>
+                        </a>
+                    </li>
+                    <li class="projects-list__item">
+                        <img src="img/projeto-optimus-tech.png" alt="" class="test">
+                        <a class="projects-list__link" href="https://samuelcolares.github.io/alura-7-days-of-code-html-css-challenge/">
+                            <h2 class="project-title">7 days of code HTML e CSS</h2>
+                            <span class="project-subtitle">Desafio da Alura pela conclusão do curso de HTML e CSS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>

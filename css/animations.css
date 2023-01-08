@@ -1,0 +1,55 @@
+
+@keyframes shadoweffect {
+    0% {
+        box-shadow: 0 0 10px var(--shadow-color);
+    }
+
+    100% {
+        box-shadow: 0 0 20px var(--shadow-color);
+    }
+}
+
+@keyframes bareffect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 500% 0;
+    }
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(-2000px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes translate2 {
+    0% {
+        transform: translateX(2000px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes translateMobile {
+    0% {
+        transform: translateY(1000px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0px) scale(1.2);
+    }
+}
+
+@keyframes opacity {
+    0% {
+      filter: opacity(0);
+    }
+    100% {
+      filter: opacity(1);
+    }
+}

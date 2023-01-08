@@ -1,0 +1,136 @@
+.profile-avatar {
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.5;
+    margin: -3rem auto 0 auto;
+    border-radius: 0 0 50vw 50vw;
+}
+
+.profile-avatar__background {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50vw 50vw 50vw 50vw;
+    transform: rotate(100deg);
+}
+
+.profile-avatar__background.mobile {
+    display: none;
+}
+
+.profile-avatar .profile-avatar__avatar {
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    transform: scale(1.2);
+    animation: translateMobile 4s ease-out forwards;
+}
+
+.profile-text{
+    margin: 2em 0;
+}
+
+.profile-text__name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+.profile-text > .profile-text__name::after {
+    content: "";
+    display: block;
+    margin: 2px auto 0.3em auto;
+    width: 12.8ch;
+    height: 2.5px;
+    background: linear-gradient(
+        90deg,
+        rgb(89, 35, 149),
+        rgb(206, 144, 211),
+        rgb(59, 14, 158),
+        rgb(0, 33, 89),
+        rgb(244, 178, 62),
+        rgb(66, 138, 254),
+        rgb(243, 16, 73),
+        rgb(65, 35, 211),
+        rgb(170, 165, 249),
+        rgb(175, 0, 30),
+        rgb(89, 35, 149)
+    );
+    background-size: 500%;
+    animation: bareffect 60s linear infinite;
+}
+
+.profile-text__function{
+    font-size: 1rem;
+}
+
+.profile {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.social-icons__link img{
+    width: 33px;
+}
+
+.icon{
+    font-size: 33px;
+    color: white;
+}
+
+@media screen and (max-width: 767px){
+    .profile-avatar__background, .profile-text, .social-icons{
+        animation: opacity 4s ease-out 1s forwards;
+        filter: opacity(0);
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    
+    .profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: -3rem;
+    }
+
+    .profile-avatar{
+        margin: 0;
+    }
+
+    .profile-text{
+        margin: 5rem 0 0 0;
+    }
+
+    .profile-text__name{
+        font-size: 2em;
+    }
+    
+    .profile-text > .profile-text__name::after {
+        height: 4px;
+        margin-top: 0.3em;
+        width: 12.5ch;
+    }
+    .profile-text__function{
+        font-size: 1.35em;
+    }
+
+    .social-icons{
+        justify-content: center;
+        gap: 5rem;
+        margin: 2rem 0;
+    }
+}
